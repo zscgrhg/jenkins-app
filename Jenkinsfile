@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'apache-ant' } }
+    agent { docker { image 'nuancemobility/apache-ant' } }
 
 
 
