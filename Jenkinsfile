@@ -11,6 +11,7 @@ pipeline {
             steps {
                 withEnv(['PATH+EXTRA=${env.ANT_HOME}/bin']) {
                   sh 'echo "Hello World"'
+                  sh 'echo ${env.PATH}'
                   sh 'ant build'
                 }
 
