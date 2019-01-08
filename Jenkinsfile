@@ -2,6 +2,7 @@ pipeline {
     agent { docker { image 'maven:3.3.3' } }
 
     environment {
+            def WORKSPACE = pwd()
             ANT_HOME = '${WORKSPACE}/tools/apache-ant-1.10.5-bin/apache-ant-1.10.5/'
 
         }
