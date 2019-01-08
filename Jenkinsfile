@@ -9,9 +9,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                withEnv(['PATH+EXTRA=${env.ANT_HOME}/bin']) {
+                withEnv(['PATH+EXTRA=${ANT_HOME}/bin']) {
                   sh 'echo "Hello World"'
-                  sh 'echo ${env.PATH}'
+                  sh 'echo ${PATH}'
                   sh 'ant build'
                 }
 
