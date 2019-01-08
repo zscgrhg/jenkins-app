@@ -12,6 +12,7 @@ pipeline {
                 withEnv(['PATH+EXTRA=${ANT_HOME}/bin']) {
                   sh 'echo "Hello World"'
                   sh 'echo ${PATH}'
+                  sh 'echo ${ANT_HOME}'
                   sh 'ant build'
                 }
 
