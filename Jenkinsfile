@@ -4,6 +4,7 @@ pipeline {
     environment {
 
         ANT_HOME    = '${WORKSPACE}/tools/apache-ant-1.10.5-bin/apache-ant-1.10.5/'
+        PATH = '${ANT_HOME}/bin:${PATH}'
     }
 
     stages {
@@ -13,7 +14,7 @@ pipeline {
                   println(WORKSPACE)
                   sh 'echo "Hello World"'
 
-                  sh '${WORKSPACE}/tools/apache-ant-1.10.5-bin/apache-ant-1.10.5/bin/ant build'
+                  sh 'ant build'
 
             }
         }
